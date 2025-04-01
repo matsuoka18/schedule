@@ -39,12 +39,12 @@ console.log(content);
     content = JSON.parse(content);
     var branch = content[0].branch;
     console.log(branch);
+    var s_time = content[0].s_time;
+    var e_time = content[0].e_time;
+    var theme = content[0].theme;
+    var place = content[0].place;
+    var date = content[0].date;
     if(branch == "write"){
-       var s_time = content[0].s_time;
-       var e_time = content[0].e_time;
-       var theme = content[0].theme;
-       var place = content[0].place;
-       var date = content[0].date;
          if(place.length <= 0 ){
              place = "なし";
          }
@@ -54,11 +54,50 @@ console.log(content);
            console.log("Writed");
            
      }else if(branch == "change"){
+
+
+        console.log(s_time);
         //日付だけか日付と時間の両方で,何を変更するか
-        //var change_data1 = 'update work_schedule_detail set ';
-     console.log(content[0]);
-      console.log("change");
+var data1 = '';
+var data2 = '';
+if(s_time.indexOf("#") !=-1 ){
+    data1 += "s_time="+"\""+s_time.substring(1,)+"\""+" and ";
+}else{
+    data2+="s_time="+"\""+s_time+"\""+",";
+}
+if(e_time.indexOf("#") !=-1 ){
+    data1 += "e_time="+"\""+e_time.substring(1,)+"\""+" and ";
+}else{
+    data2+="e_time="+"\""+e_time+"\""+",";
+}
+if(theme.indexOf("#") !=-1 ){
+    data1 += "theme="+"\""+theme.substring(1,)+"\""+" and ";
+}else{
+    data2+="theme="+"\""+theme+"\""+",";
+}
+if(place.indexOf("#") !=-1 ){
+    data1 += "place="+"\""+place.substring(1,)+"\""+" and ";
+}else{
+    data2+="place="+"\""+place+"\""+",";
+}
+if(date.indexOf("#") !=-1 ){
+    data1 += "date="+"\""+date.substring(1,)+"\""+" and ";
+}else{
+    data2+="date="+"\""+date+"\""+",";
+}
+console.log(data1);
+console.log(data2);
+data1 = data1.substring(0,parseInt(data1.length)-5);
+data2 = data2.substring(0,parseInt(data2.length)-1);
+var change_data1 = 'update schedule_detail set '+data2+" where "+data1+";";
+server.query(change_data1);
+     console.log(change_data1);
+      console.log("changed");
      }else if(branch == "delete"){
+
+var delete_data = 'delete from schedule_detail where s_time='+"\""+s_time+"\" and e_time="+"\""+e_time+"\" and theme="+"\""+theme+"\" and date="+"\""+date+"\";";
+server.query(delete_data);
+
      console.log("delete")
      }else{
          console.log("Branch Error");
