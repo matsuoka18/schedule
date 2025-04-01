@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>シフト管理</title>
+        <link rel="stylesheet" href="css-indexs.css">
+    </head>
+    <body onload="start()">
+      <div class="top" id="top">
+        <div class="name" id="name">Schedules</div>
+        <div class="bar" id="bar">
+            <p onclick="">予定追加</p>
+            <p onclick="">予定確認</p>
+            <p onclick="">プログラム</p>
+        </div>
+      </div>
+      <div class="t_sche" id="t_sche">
+        <p class="ts">今日の予定</p>
+        <div class="detail" id="detail">
+        <div class="d1" id="d1">
+            <p>開始時間</p>
+            <p id="i1">12：00</p>
+        </div>
+        <div class="d1" id="d1">
+            <p>終了時間</p>
+            <p id="i2">21：00</p>
+        </div>
+        <div class="d1" id="d1">
+            <p>名称</p>
+            <p id="i3">東進</p>
+        </div>
+        <div class="d1" id="d1">
+            <p>場所</p>
+            <p id="i4">東進衛星予備校藤沢駅南口校</p>
+        </div>
+    </div>
+      </div>
+      <div class="t" id="t">
+        <p>予定を追加する</p>
+        <div class="t2" id="t2">
+          <p>開始時刻</p>
+         <input type="date" id="date" value="">
+         <input type="time" id="time" value="">
+        </div>
+        <div class="t2" id="t2">
+          <p>終了時刻</p>
+         <input type="date" id="date2" value="">
+         <input type="time" id="time2" value="">
+        </div>
+        <div class="t2" id="t2">
+          <p>名称</p>
+         <input type="text" id="name" value="" placeholder="Name">
+        </div>
+        <div class="t2" id="t2">
+          <p>場所</p>
+          <input type="text" id="place" value="" placeholder="Place">
+        </div>
+        <button onclick="fin()">送信</button>
+
+        </div>
+        <script src="js-indexs.js"></script>
+    </body>
+</html>
