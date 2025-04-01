@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>プログラムファイルダウンロード</title>
+        <link rel="stylesheet" href="css-program.css">
+    </head>
+    <body>
+        <div class="top" id="top">
+            <div class="name" id="name">Schedules</div>
+            <div class="bar" id="bar">
+                <p onclick="jump1()">予定追加</p>
+                <p onclick="jump2()">予定確認</p>
+                <p onclick="jump3()">トップページ</p>
+            </div>
+        </div>
+        <div class="block1" id="bclock1">
+            <p>CSS</p>
+            <a href="css-indexs.css">css-indexs.css</a>
+            <a href="css-program.css">css-indexs.css"</a>
+            <a href="css-schedule.css">css-schedule.css</a>
+            <a href="css-send.css">css-send.css</a>
+            <p>HTML</p>
+            <a href="indexs.html">indexs.html</a>
+            <a href="program.html">program.html</a>
+            <a href="schedule.html">schedule.html</a>
+            <a href="send.html">send.html</a>
+            <p>JavaScript</p>
+            <a href="js-indexs.js">js-indexs.js</a>
+            <a href="js-schedule.js">js-schedule.js</a>
+            <a href="js-send.js">js-send.js</a>
+        </div>
+        <script>
+           function jump1(){
+                location.href = "send.html";
+            }
+            function jump2(){
+                location.href = "schedule.html";
+            }
+            function jump3(){
+                location.href = "indexs.html";
+            }
+        </script>
+    </body>
+</html>

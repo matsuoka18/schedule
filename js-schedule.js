@@ -4,6 +4,9 @@ function jump1(){
 function jump2(){
     location.href = "send.html"
 }
+function jump3(){
+    location.href="program.html";
+}
 function schedule_get(){ 
     console.log("Load");
 var url = 'https://script.google.com/macros/s/AKfycbxoOsQWCOtQPchamjt9hON7x5WFppcw1kjovGNfReLGGBb4ZKfocA1oyltJ9JVxeI69/exec';

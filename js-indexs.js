@@ -6,6 +6,9 @@ function jump1(){
 function jump2(){
     location.href="schedule.html";
 }
+function jump3(){
+    location.href = "program.html"
+}
 function start(){
     var url = 'https://script.google.com/macros/s/AKfycbxoOsQWCOtQPchamjt9hON7x5WFppcw1kjovGNfReLGGBb4ZKfocA1oyltJ9JVxeI69/exec';
     fetch(url,{
@@ -39,7 +42,7 @@ function schedule_check(json){
         num.push(a);
       }
     }
-    
+
     if(num.length == 1){
         document.getElementById("i1").innerHTML = json[num[0]].s_time;
         document.getElementById("i2").innerHTML = json[num[0]].e_time;
@@ -64,12 +67,13 @@ function schedule_check(json){
             }
             
         },2000)
-    }
+    }else if(num.length == 0){
     document.getElementById("i1").innerHTML = "予定なし";
     document.getElementById("i2").innerHTML = "予定なし";
     document.getElementById("i3").innerHTML = "予定なし";
     document.getElementById("i4").innerHTML = "予定なし";
     document.getElementById("i5").innerHTML = "予定なし";
+    }
 }
 
 function fin(){

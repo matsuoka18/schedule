@@ -4,6 +4,9 @@ function jump1(){
 function jump2(){
     location.href = "schedule.html"
 }
+function jump3(){
+    location.href="program.html"
+}
 var s_time = '';
 var e_time = '';
 var theme = '';
