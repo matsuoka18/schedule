@@ -119,7 +119,7 @@ if(count > 0){
     }
     console.log(data);
     try{
-    fetch('http://192.168.3.30:1337',params);
+    fetch('http://60.134.235.1:1337',params);
     console.log("Change_Send");
     location.href = "schedule.html"
     }
@@ -162,7 +162,7 @@ function del(num){
     }
     console.log(data);
     try{
-    fetch('http://192.168.3.30:1337',params);
+    fetch('http://60.134.235.1:1337',params);
     console.log("Change_Send");
     location.href = "schedule.html"
     }
