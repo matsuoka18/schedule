@@ -1,0 +1,143 @@
+body{
+    margin:0;
+    padding:0 ;
+    font-family: Arial;
+}
+.top{
+    width:100vw;
+    height:10vh;
+    background-color: white;
+}
+.top .name{
+    width: fit-content;
+    height: fit-content;
+    background-color: black;
+    color:white;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.1vw;
+    margin-left: 5vw;
+    padding-top:1vw;
+    padding-bottom:1vw;
+    padding-left:5vw ;
+    padding-right:5vw ;
+}
+.top .bar{
+    position: absolute;
+    top:0;
+    right:0;
+    width:50vw;
+    height: 10vh;
+}
+.top .bar p{
+    position: relative;
+    top:5vh;
+    font-size: 1vw;
+    font-weight: 600;
+    letter-spacing: 0.2vw;
+    padding-bottom: 1vh;
+    border-bottom: 3px solid black;
+    margin: 0;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    display: inline-block;
+}
+.top .bar:nth-child(2){
+    font-weight:700;
+}
+.block1{
+    width:100vw;
+    height: fit-content;
+    background-color: black;
+}
+.block1 p{
+    width:fit-content;  
+    font-size:20px;
+    font-weight:600;
+    letter-spacing: 0.3vw;
+    margin-left:5vw;
+    padding-top:5vh;
+    padding-bottom:1vh;
+    padding-right:1vw;
+    padding-left:1vw;
+    border-bottom: 3px solid white;
+ color:white;
+}
+.block2{
+    width:100vw;
+}
+.block2 .b1{
+    width:15vw;
+    display: inline-block;
+    margin-left:1vw;
+}
+.block2 .b1 p{
+    width: 15vw;
+    border:none;
+    font-weight:500;
+    font-size:10px;
+    margin:0;
+    padding:0;
+}
+.block2 .b1 input{
+    margin:0;
+    padding:0;
+    width:15vw;
+    border:none;
+    outline:none;
+    background-color: black;
+    color:white;
+    padding-top:1vh;
+    padding-bottom:1vh;
+    font-size:20px;
+}
+.block2 .send{
+    position:relative;
+    bottom:2vh; 
+    width:10vw;
+    height:7.5vh;
+    font-size:10px;
+    color:white;
+    background-color: black;
+    border:1px solid white;
+   text-align: center;
+   line-height:7.5vh;
+   display: inline-block;
+}
+.block2 .send:hover{
+    background-color: white;
+    color:black;
+    font-weight: 700;
+}
+.block2 .send:active{
+    background-color: black;
+    color:white;
+    border:2px solid white;
+    font-weight:800;
+}
+.block2 .b2{
+    width:10vw;
+    height: 7.5vh;
+    margin:1vw;
+    text-align: center;
+    line-height:7.5vh;
+    font-size: 12.5px;
+    border:1px solid white;
+    color:white;
+    display: inline-block;
+}
+.block2 .b2:hover{
+    background-color: white;
+    color:black;
+    font-weight: 700;
+}
+.block2 .b2:active{
+    background-color: black;
+    color:white;
+    border:2px solid white;
+    font-weight:800;
+}
+.block3 p{
+margin-top:0;   
+padding-top: 1vh;
+}

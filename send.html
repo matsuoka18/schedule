@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>予定追加</title>
+        <link rel="stylesheet" href="css-send.css">
+    </head>
+    <body>
+        <div class="top" id="top">
+            <div class="name" id="name">Schedules</div>
+            <div class="bar" id="bar">
+                <p onclick="jump1()">トップページ</p>
+                <p onclick="jump2()">予定確認</p>
+                <p onclick="">プログラム</p>
+            </div>
+          </div>
+         <div class="block1" id="block1">
+            <p>予定追加</p>
+            <div class="block2" id="block2">
+                  <div class="b1" id="b1">
+                    <p>日付</p>
+                    <input type="number" id="date" value="" placeholder="01">
+                  </div>
+                  <div class="b1" id="b1">
+                    <p>開始時間</p>
+                    <input type="time" id="s_time" value="">
+                  </div>
+                  <div class="b1" id="b1">
+                    <p>終了時間</p>
+                    <input type="time" id="e_time" value="">
+                  </div>
+                  <div class="b1" id="b1">
+                    <p>名称</p>
+                    <input type="text" id="theme" value="" placeholder="名称">
+                  </div>
+                  <div class="b1" id="b1">
+                    <p>場所</p>
+                    <input type="text" id="place" value="" placeholder="場所">
+                  </div>
+                    <div class="send" id="send" onclick="send()">送信</div>
+                  <div class="block3" id="block3">
+                    <p>ショートカット</p>
+                    <div class="b2" onclick="short(1)">朝勤務(東進)</div>
+                    <div class="b2" onclick="short(2)">昼勤務(東進)</div>
+                    <div class="b2" onclick="short(3)">夜勤務(東進)</div>
+                  </div>
+            </div>
+      </div>
+<script src="js-send.js"></script>
+    </body>
+</html>

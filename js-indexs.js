@@ -1,17 +1,14 @@
+var shcedule = '';
+function jump1(){
+    location.href = "send.html";
+}
+
+function jump2(){
+    location.href="schedule.html";
+}
 function start(){
-    var url = 'http://192.168.3.30:1337';
-    fetch(url,{
-        'method':"GET",
-        'mode':"cors"
-    })
-    .then(response =>{
-        if(response.ok){
-            return response.json();
-        }
-    })
-    .then(json =>{
-        console.log(json)
-    })
+
+    start2();
 }
 function fin(){
     var s_time1 = document.getElementById("date").value;
@@ -39,6 +36,36 @@ function fin(){
         "Content-Type":"application/json",
         "body":JSON.stringify(data)
     }
-    fetch('http://192.168.3.30:1337',params);
+    fetch('http://60.134.235.1:1337',params);
     console.log(JSON.stringify(data));
+}
+function show(){
+
+}
+
+//today's activityのやつ
+url = "https://script.google.com/macros/s/AKfycbyDVhDM3jguwxl-nuUjiUY-lSj_s7fe4BfusIcK1TSGnvp2BhYMRpaengK5SO_E4vM/exec";
+function start2(){
+    var time = new Date();
+    var hour = time.getHours();
+    var minute = time.getMinutes();
+    document.getElementById("time_c").innerHTML = hour+":"+minute;
+    t5 = document.getElementById("t5");
+    fetch(url,{
+        "method":"GET",
+        "mode":"cors"
+    })
+    .then(response =>{
+        if(response.ok){
+            return response.json()
+        }
+    })
+    .then(resJson =>{
+        length = resJson.length;
+        for(var a = 0; a<length; a++){
+            text = resJson[a];
+            data = "<p class="+"\""+"t55"+"\""+">"+text+"</p>";
+            t5.insertAdjacentHTML("beforeend",data);
+        }
+    })
 }

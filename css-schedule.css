@@ -1,0 +1,132 @@
+body{
+    margin:0;
+    padding:0 ;
+    font-family: Arial;
+}
+.top{
+    width:100vw;
+    height:10vh;
+    background-color: white;
+}
+.top .name{
+    width: fit-content;
+    height: fit-content;
+    background-color: black;
+    color:white;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.1vw;
+    margin-left: 5vw;
+    padding-top:1vw;
+    padding-bottom:1vw;
+    padding-left:5vw ;
+    padding-right:5vw ;
+}
+.top .bar{
+    position: absolute;
+    top:0;
+    right:0;
+    width:50vw;
+    height: 10vh;
+}
+.top .bar p{
+    position: relative;
+    top:5vh;
+    font-size: 1vw;
+    font-weight: 600;
+    letter-spacing: 0.2vw;
+    padding-bottom: 1vh;
+    border-bottom: 3px solid black;
+    margin: 0;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    display: inline-block;
+}
+.top .bar:nth-child(2){
+    font-weight:700;
+}
+.block1{
+    width:100vw;
+    height: fit-content;
+    background-color: black;
+}
+.block1 p{
+    width:fit-content;  
+    font-size:20px;
+    font-weight:600;
+    letter-spacing: 0.3vw;
+    margin-left:5vw;
+    padding-top:5vh;
+    padding-bottom:1vh;
+    padding-right:1vw;
+    padding-left:1vw;
+    border-bottom: 3px solid white;
+ color:white;
+}
+.block3{
+    position:relative;
+    margin-left:1vw;
+    margin-bottom:2.5vh;
+    color:white;
+}
+.block4{
+    display: inline-block;
+    width:15vw;
+    height:  fit-content;
+    border-right: 1px solid white;
+    margin:0;
+    padding:0;
+}
+.block4 p{
+    width:15vw;
+    font-size:10px;
+    font-weight:500;
+    border: none;
+    margin:0;
+    padding:0;
+    padding-left:1vw;
+}
+.block4 input{
+    width:14vw;
+border:none;
+outline:none;
+color:white;
+background-color: black;
+font-size:20px;
+margin:0;
+margin-top:1vh;
+padding:0;
+padding-left:1vw;
+}
+.block4 input:hover{
+font-weight: 600;
+}
+.block4 input:focus {
+    background-color: rgb(38, 38, 38);
+}
+.bt{
+    position: relative;
+    bottom:1.5vh;
+    width:7.5vw;
+    height: 5vh;
+    margin-left:0.5vw;
+    margin-right:0.5vw;
+    
+    border:1px solid white;
+    color:white;
+    display: inline-block;
+    text-align:center;
+    line-height: 5vh;
+    font-size:10px;
+}
+.bt:hover{
+    background-color: white;
+    color:black;
+    font-weight:800;
+}
+.bt:active{
+    background-color: black;
+    color:white;
+    font-weight: 800;
+    border:1.5px solid white;
+}
