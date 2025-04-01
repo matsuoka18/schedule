@@ -25,6 +25,9 @@ function short(num){
         e_time = "22:00";
         theme = "東進";
         place = "藤沢駅南口校";
+    }else if(num == 4){
+        theme = "大学";
+        place = "南大沢キャンパス";
     }
     document.getElementById("s_time").value = s_time;
     document.getElementById("e_time").value = e_time;
