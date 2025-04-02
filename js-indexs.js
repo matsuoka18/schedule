@@ -11,6 +11,7 @@ function jump3(){
 }
 function start(){
     var url = 'https://script.google.com/macros/s/AKfycbxoOsQWCOtQPchamjt9hON7x5WFppcw1kjovGNfReLGGBb4ZKfocA1oyltJ9JVxeI69/exec';
+    //var url = "http://60.134.235.1";
     fetch(url,{
         'method':"GET",
         'mode':"cors"
@@ -25,14 +26,25 @@ function start(){
         console.log(json)
         schedule_check(json);
     })
-
+.catch(err =>{
+    console.log(err);
+    console.log("ERROR");
+    
+    document.getElementById("i1").innerHTML = "読込み失敗";
+    document.getElementById("i2").innerHTML = "読込み失敗";
+    document.getElementById("i3").innerHTML = "読込み失敗";
+    document.getElementById("i4").innerHTML = "読込み失敗";
+    document.getElementById("i5").innerHTML = "読込み失敗";
+})
     start2();
 }
 
+var num_past = [];
 function schedule_check(json){
 
     var length = json.length;
     var num = [];
+    
     var time = new Date();
     time = time.getDate();
     
@@ -40,9 +52,11 @@ function schedule_check(json){
         
       if(parseInt(json[a].date) == time){
         num.push(a);
+      }else if(parseInt(json[a].date) < time){
+        num_past.push(a);
       }
     }
-
+//今日の予定の処理
     if(num.length == 1){
         document.getElementById("i1").innerHTML = json[num[0]].s_time;
         document.getElementById("i2").innerHTML = json[num[0]].e_time;
@@ -74,8 +88,35 @@ function schedule_check(json){
     document.getElementById("i4").innerHTML = "予定なし";
     document.getElementById("i5").innerHTML = "予定なし";
     }
+
+//予定削除の処理
+if(num_past.length > 0){
+    schedule_delete(json);
 }
 
+}
+function schedule_delete(json){
+    console.log("schedule_delete")
+    for(var a of num_past){
+var data = [{
+    "branch":"delete",
+    "s_time":json[a].s_time,
+    "e_time":json[a].e_time,
+    "theme":json[a].theme,
+    "place":json[a].place,
+    "date":json[a].date
+}];
+var params = {
+    "method":"post",
+    "mode":"no-cors",
+    "Content-Type":"application/json",
+    "body":JSON.stringify(data)
+}
+fetch('http://60.134.235.1:1337',params);
+//fetch('http://192.168.3.30:1337',params);
+console.log("delete");
+    }
+}
 function fin(){
     var s_time1 = document.getElementById("date").value;
     var s_time12 = document.getElementById("time").value;
