@@ -11,7 +11,7 @@ function jump3(){
 
 function schedule_get(){ 
     console.log("Load");
-var url = 'https://script.google.com/macros/s/AKfycbxoOsQWCOtQPchamjt9hON7x5WFppcw1kjovGNfReLGGBb4ZKfocA1oyltJ9JVxeI69/exec';
+var url = '//script.google.com/macros/s/AKfycbxoOsQWCOtQPchamjt9hON7x5WFppcw1kjovGNfReLGGBb4ZKfocA1oyltJ9JVxeI69/exec';
 fetch(url,{
     'method':"GET",
     'mode':"cors"
@@ -126,7 +126,7 @@ if(count > 0){
     }
     console.log(data);
     try{
-    fetch('http://60.134.235.1:1337',params);
+    fetch('//60.134.235.1:1337',params);
     //fetch('http://192.168.3.30:1337',params);
     console.log("Change_Send");
     change_check(data);
@@ -172,7 +172,7 @@ function del(num){
     }
     console.log(data);
     try{
-    fetch('http://60.134.235.1:1337',params);
+    fetch('//60.134.235.1:1337',params);
     //fetch('http://192.168.3.30:1337',params);
     change_check(data);
     console.log("Delete_Send");
@@ -186,7 +186,7 @@ function del(num){
 }
 
 function change_check(data){
-    var url = 'https://script.google.com/macros/s/AKfycbxoOsQWCOtQPchamjt9hON7x5WFppcw1kjovGNfReLGGBb4ZKfocA1oyltJ9JVxeI69/exec';
+    var url = '//script.google.com/macros/s/AKfycbxoOsQWCOtQPchamjt9hON7x5WFppcw1kjovGNfReLGGBb4ZKfocA1oyltJ9JVxeI69/exec';
     fetch(url,{
         'method':"GET",
         'mode':"cors"

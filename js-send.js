@@ -68,7 +68,7 @@ function send(){
         "body":data
     }
     try{
-    fetch("http://60.134.235.1:1337",params);
+    fetch("//60.134.235.1:1337",params);
     //fetch("http://192.168.3.30:1337",params);
     console.log("Sended")
     document.getElementById("s_time").value = "";

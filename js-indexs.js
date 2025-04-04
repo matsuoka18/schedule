@@ -10,7 +10,7 @@ function jump3(){
     location.href = "program.html"
 }
 function start(){
-    var url = 'https://script.google.com/macros/s/AKfycbxoOsQWCOtQPchamjt9hON7x5WFppcw1kjovGNfReLGGBb4ZKfocA1oyltJ9JVxeI69/exec';
+    var url = '//script.google.com/macros/s/AKfycbxoOsQWCOtQPchamjt9hON7x5WFppcw1kjovGNfReLGGBb4ZKfocA1oyltJ9JVxeI69/exec';
     //var url = "http://60.134.235.1";
     fetch(url,{
         'method':"GET",
@@ -112,7 +112,7 @@ var params = {
     "Content-Type":"application/json",
     "body":JSON.stringify(data)
 }
-fetch('http://60.134.235.1:1337',params);
+fetch('//60.134.235.1:1337',params);
 //fetch('http://192.168.3.30:1337',params);
 console.log("delete");
     }
@@ -143,7 +143,7 @@ function fin(){
         "Content-Type":"application/json",
         "body":JSON.stringify(data)
     }
-    fetch('http://60.134.235.1:1337',params);
+    fetch('//60.134.235.1:1337',params);
     console.log(JSON.stringify(data));
 }
 function show(){
@@ -151,7 +151,7 @@ function show(){
 }
 
 //today's activityのやつ
-url = "https://script.google.com/macros/s/AKfycbyDVhDM3jguwxl-nuUjiUY-lSj_s7fe4BfusIcK1TSGnvp2BhYMRpaengK5SO_E4vM/exec";
+url = "//script.google.com/macros/s/AKfycbyDVhDM3jguwxl-nuUjiUY-lSj_s7fe4BfusIcK1TSGnvp2BhYMRpaengK5SO_E4vM/exec";
 function start2(){
     var time = new Date();
     var hour = time.getHours();
