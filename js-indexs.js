@@ -112,7 +112,7 @@ var params = {
     "Content-Type":"application/json",
     "body":JSON.stringify(data)
 }
-fetch('//60.134.235.1:1337',params);
+fetch('http://60.134.235.1:1337',params);
 //fetch('http://192.168.3.30:1337',params);
 console.log("delete");
     }
@@ -143,7 +143,7 @@ function fin(){
         "Content-Type":"application/json",
         "body":JSON.stringify(data)
     }
-    fetch('//60.134.235.1:1337',params);
+    fetch('http://60.134.235.1:1337',params);
     console.log(JSON.stringify(data));
 }
 function show(){
